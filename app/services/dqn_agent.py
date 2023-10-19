@@ -162,7 +162,7 @@ class DQNAgent:
 
     def store_agent(self, username):
         # Create a directory for user checkpoints if it doesn't exist
-        user_dir = f"ROCKPAPERSCISSORSAPI/users/{username}"
+        user_dir = f"RockPaperScissors_RESTful_API/users/{username}"
         print(user_dir)
         if not os.path.exists(user_dir):
             os.makedirs(user_dir)
@@ -195,7 +195,7 @@ class DQNAgent:
                    os.path.join(user_dir, "q_eval.pth"))
 
     def load_agent(self, username):
-        user_dir = f"ROCKPAPERSCISSORSAPI/users/{username}"
+        user_dir = f"RockPaperScissors_RESTful_API/users/{username}"
         try:
             # Load agent's attributes
             with open(os.path.join(user_dir, "agent.pkl"), "rb") as f:
